@@ -21,7 +21,13 @@ public class Bicicleta extends Vehiculo {
 	
 	@Override 
 	public void acelerar() {
-		//"Pedaleo más rápido"
+		super.acelerar();
+		System.out.println("Pedaleo más rápido");
 	}
 
+	@Override
+	public String showVehiculo() {
+		return super.showVehiculo() + "\nTipo: " + this.tipo;
+	}
+	
 }

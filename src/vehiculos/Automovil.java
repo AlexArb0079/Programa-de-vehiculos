@@ -20,8 +20,10 @@ public class Automovil extends VehiculoAMotor {
 		this.baul = baul;
 	}
 
-	
-	
+	@Override
+	public String showVehiculo() {
+		return super.showVehiculo() + "\nBaul: " + this.baul;
+	}
 	
 
 }

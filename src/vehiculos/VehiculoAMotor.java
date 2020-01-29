@@ -18,6 +18,9 @@ public class VehiculoAMotor extends Vehiculo {
 		this.velocidadMaxima = velocidadMaxima;
 	}
 
-	
+	@Override
+	public String showVehiculo() {
+		return super.showVehiculo() + "\nvelocidad maxima: " + this.velocidadMaxima;
+	}
 	
 }

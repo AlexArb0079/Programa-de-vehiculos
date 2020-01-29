@@ -4,9 +4,9 @@ public class Vehiculo {
 
 	protected String marca;
 	protected String modelo;
-	protected int NroDeRuedas;
-	protected String Color;
-	protected int AnoDeFabricacion;
+	protected int nroDeRuedas;
+	protected String color;
+	protected int anoDeFabricacion;
 	protected int velocidad;
 	
 	public Vehiculo(String marca, String modelo, int NroDeRuedas, String Color, int AnoDeFabricacion) {
@@ -16,7 +16,7 @@ public class Vehiculo {
 		this.setColor(Color);
 		this.setAnoDeFabricacion(AnoDeFabricacion);
 		
-		velocidad = 0;
+		setVelocidad(0);
 	}	
 
 	public String getMarca() {
@@ -36,37 +36,51 @@ public class Vehiculo {
 	}
 
 	public int getNroDeRuedas() {
-		return NroDeRuedas;
+		return nroDeRuedas;
 	}
 
 	public void setNroDeRuedas(int nroDeRuedas) {
-		NroDeRuedas = nroDeRuedas;
+		this.nroDeRuedas = nroDeRuedas;
 	}
 
 	public String getColor() {
-		return Color;
+		return color;
 	}
 
 	public void setColor(String color) {
-		Color = color;
+		this.color = color;
 	}
 
 	public int getAnoDeFabricacion() {
-		return AnoDeFabricacion;
+		return anoDeFabricacion;
 	}
 
 	public void setAnoDeFabricacion(int anoDeFabricacion) {
-		AnoDeFabricacion = anoDeFabricacion;
+		this.anoDeFabricacion = anoDeFabricacion;
 	}
 	
-	//TODO:
+	public int getVelocidad() {
+		return velocidad;
+	}
+
+	public void setVelocidad(int velocidad) {
+		this.velocidad = velocidad;
+	}
+
 	public void acelerar() {
-		
+		this.setVelocidad(this.getVelocidad() + 50);
 	}
 	
 	public void frenar() {
-		
+		this.setVelocidad(this.getVelocidad() - 20);
 	}
 	
+	public String showVehiculo() {
+		return "Marca: " + this.marca + 
+				"\nModelo: " + this.modelo + 
+				"\nNumero de ruedas: " + this.nroDeRuedas + 
+				"\nColor: " + this.color + 
+				"\nAño de fabricacion: " + this.anoDeFabricacion;
+	}
 	
 }

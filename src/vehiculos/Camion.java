@@ -2,7 +2,7 @@ package vehiculos;
 
 public class Camion extends VehiculoAMotor {
 	
-	private String TamanoDelAcoplado;
+	private String tamanoDelAcoplado;
 
 	public Camion(String marca, String modelo, int NroDeRuedas, String Color, int AnoDeFabricacion,
 			float velocidadMaxima, String TamanoDelAcoplado) {
@@ -12,11 +12,16 @@ public class Camion extends VehiculoAMotor {
 	}
 
 	public String getTamanoDelAcoplado() {
-		return TamanoDelAcoplado;
+		return tamanoDelAcoplado;
 	}
 
 	public void setTamanoDelAcoplado(String tamanoDelAcoplado) {
-		TamanoDelAcoplado = tamanoDelAcoplado;
+		this.tamanoDelAcoplado = tamanoDelAcoplado;
 	}
 
+	@Override
+	public String showVehiculo() {
+		return super.showVehiculo() + "\nTamaño del acoplado: " + this.tamanoDelAcoplado;
+	}
+	
 }
